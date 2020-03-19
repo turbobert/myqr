@@ -8,9 +8,6 @@ import sys
 #modes: [1] == gotomeeting ID
 #       [1] == youtube ID
 
-if len(sys.argv) < 3:
-    print("no parameters")
-    sys.exit(0)
 
 if sys.argv[1] == "gotomeeting":
     url = "https://global.gotomeeting.com/join/%s" % sys.argv[2]
@@ -49,7 +46,7 @@ if sys.argv[1] == "youtube":
     sys.exit(0)
 
 if sys.argv[1] == "bank":
-    if len(sys.argv) == 2 or sys.argv[2] == "":
+    if len(sys.argv) == 2 or sys.argv[2] == "help":
         print("myqr bank <EMPFÄNGER> <IBAN> <BETRAG> <BETREFF>")
         print("Betrag mit PUNKT nicht mit KOMMA")
         sys.exit(0)
