@@ -16,6 +16,14 @@ if sys.argv[1] == "gotomeeting" or sys.argv[1] == "gm":
     img.save("gotomeeting.png")
     sys.exit(0)
 
+if sys.argv[1] == "zoom" or sys.argv[1] == "z":
+    url = "https://zoom.us/j/%s" % sys.argv[2]
+    print("url=%s" % url)
+    img = qrcode.make(url)
+    img.save("zoom.png")
+    img.save("zoom-%s.png" % sys.argv[2])
+    sys.exit(0)
+
 if sys.argv[1] == "mail":
     address = sys.argv[2]
     subject = sys.argv[3]
