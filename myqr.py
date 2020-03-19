@@ -9,7 +9,7 @@ import sys
 #       [1] == youtube ID
 
 
-if sys.argv[1] == "gotomeeting":
+if sys.argv[1] == "gotomeeting" or sys.argv[1] == "gm":
     url = "https://global.gotomeeting.com/join/%s" % sys.argv[2]
     print("url=%s" % url)
     img = qrcode.make(url)
